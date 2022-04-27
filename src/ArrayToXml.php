@@ -29,7 +29,7 @@ class ArrayToXml
         $domProperties = [],
         $xmlStandalone = null
     ) {
-        $this->document = new DOMDocument($xmlVersion, $xmlEncoding);
+        $this->document = new DOMDocument($xmlVersion, $xmlEncoding ?? '');
 
         if (! is_null($xmlStandalone)) {
             $this->document->xmlStandalone = $xmlStandalone;
